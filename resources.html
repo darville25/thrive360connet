@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Shop Resources & Books | Thrive360Connect</title>
+    <meta name="description" content="Buy 'Beyond The Grades' by Coach Irene Nyaga. Download training manuals, parenting guides, and career workbooks instantly via M-PESA or Card.">
+    <meta name="keywords" content="Beyond The Grades Book PDF, Buy Books M-PESA, Coach Irene Nyaga, Parenting Manuals, Career Workbooks, Digital Downloads Kenya">
+    
+    <!-- Link to Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <!-- Page Specific Styles (Framing Logic) -->
+    <style>
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Hero Section */
+        .resource-hero {
+            background: linear-gradient(rgba(2, 11, 28, 0.9), rgba(0, 102, 179, 0.8)), url('images/library-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        /* --- THE FEATURED FRAME (For the Main Book) --- */
+        .showcase-frame {
+            border: 10px solid white;
+            padding: 40px;
+            position: relative;
+            background: var(--bg-light);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            max-width: 1000px;
+            margin: -100px auto 0 auto; /* Overlap Hero */
+            border-radius: 4px;
+        }
+        
+        /* Inner decorative border */
+        .showcase-inner-border {
+            border: 2px solid var(--brand-orange);
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            background: white;
+        }
+
+        /* 3D Book styling */
+        .book-3d {
+            width: 300px;
+            box-shadow: 15px 15px 30px rgba(0,0,0,0.3);
+            transform: perspective(1000px) rotateY(-15deg);
+            transition: 0.5s;
+            border-radius: 5px;
+        }
+        .book-3d:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.05);
+        }
+
+        /* --- THE MANUALS GRID (Shelf Frames) --- */
+        .shelf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            padding: 60px 0;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 20px;
+            /* The "Frame" Look */
+            border: 1px solid #ddd;
+            border-bottom: 5px solid var(--brand-blue);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            position: relative;
+            transition: 0.3s;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-orange);
+        }
+
+        .img-frame {
+            background: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px dashed #ccc;
+        }
+        
+        .img-frame img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .price-tag {
+            background: var(--brand-orange);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Payment Trust Badge */
+        .trust-badge {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #777;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* Mobile Fixes */
+        @media (max-width: 768px) {
+            .showcase-inner-border { flex-direction: column; padding: 20px; text-align: center; }
+            .showcase-frame { margin: 0 20px; padding: 10px; border-width: 5px; }
+            .book-3d { width: 200px; transform: none; }
+            .resource-hero { height: auto; padding: 100px 20px; }
+            
+            /* Stack buttons on mobile */
+            .purchase-options {
+                flex-direction: column;
+                width: 100%;
+            }
+            .purchase-options .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Thrive360<span>Connect</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Programs <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="women-coaching.html">Women Coaching</a></li>
+                        <li><a href="youth-mentorship.html">Youth Mentorship</a></li>
+                        <li><a href="coaches.html">Coaches Program</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" style="color: var(--brand-orange); font-weight: bold;">Resources <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="resources.html">Books & Manuals</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="resource-hero">
+        <div class="container">
+            <h1 style="font-size: 42px;">The Knowledge Hub</h1>
+            <p style="font-size: 18px; max-width: 600px; margin: 0 auto; opacity: 0.9;">Tools, Workbooks, and Literature to support your growth journey.</p>
+        </div>
+    </header>
+
+    <!-- FEATURED BOOK (The Masterpiece Frame) -->
+    <section class="section">
+        <div class="container">
+            <div class="showcase-frame">
+                <div class="showcase-inner-border">
+                    <!-- Object 1: The Book -->
+                    <div class="book-visual">
+                        <img src="images/book-cover.png.png" alt="Beyond The Grades Book" class="book-3d">
+                    </div>
+                    
+                    <!-- Object 2: The Description -->
+                    <div class="book-details">
+                        <span class="tag" style="background: var(--brand-blue);">Best Seller</span>
+                        <h2 style="color: var(--brand-orange); font-size: 32px; margin: 10px 0;">Beyond The Grades</h2>
+                        <p style="font-style: italic; color: #666; margin-bottom: 20px;">Finding Purpose Beyond Exam Results</p>
+                        
+                        <p style="margin-bottom: 20px;">
+                            This is not just a book; it is a survival guide for parents and students in a high-pressure academic world. 
+                            Coach Irene dissects the myth that "grades equal success" and provides a practical framework for identifying talent and building resilience.
+                        </p>
+
+                        <div style="background: #f4f8fb; padding: 15px; border-left: 3px solid var(--brand-cyan); margin-bottom: 25px; border-radius: 0 5px 5px 0;">
+                            <strong>Format:</strong> Available as Hard Copy & Instant PDF Download.
+                        </div>
+
+                        <!-- PURCHASE BUTTONS -->
+                        <div class="purchase-options" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            
+                            <!-- OPTION 1: DOWNLOAD SOFT COPY (Instant) -->
+                            <!-- IMPORTANT: Replace '#' with your Selar link -->
+                            <a href="https://selar.co/your-book-link" target="_blank" class="btn btn-orange">
+                                <i class="fas fa-download"></i> Buy Soft Copy (KES 1,000)
+                            </a>
+
+                            <!-- OPTION 2: ORDER HARD COPY (WhatsApp) -->
+                            <a href="https://wa.me/254700000000?text=Hi%20Coach%20Irene,%20I%20would%20like%20to%20order%20a%20Hard%20Copy%20of%20Beyond%20The%20Grades" target="_blank" class="btn btn-outline">
+                                <i class="fas fa-truck"></i> Order Hard Copy (KES 1,500)
+                            </a>
+
+                        </div>
+
+                        <div class="trust-badge">
+                            <i class="fas fa-lock" style="color: #10ac84;"></i> Secure Payment via <strong>M-PESA / VISA</strong>. Instant Email Delivery.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAINING MANUALS (The Shelf Grid) -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2>Training Manuals & Workbooks</h2>
+                <p class="subtitle">Practical guides used in our workshops, now available for you.</p>
+            </div>
+
+            <div class="shelf-grid">
+                
+                <!-- Manual 1 -->
+                <div class="resource-card">
+                    <div class="img-frame">
+                        <img src="https://via.placeholder.com/200x280?text=Parenting+Teens" alt="Parenting Manual">
+                    </div>
+                    <span class="price-tag">KES 1,000</span>
+                    <h4>Parenting Teens Manual</h4>
+                    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">A workbook for navigating screen time, peer pressure, and communication.</p>
+                    <a href="https://selar.co/your-link-here" class="btn btn-outline" style="font-size: 12px; width: 100%;">Download PDF</a>
+                </div>
+
+                <!-- Manual 2 -->
+                <div class="resource-card">
+                    <div class="img-frame">
+                        <img src="https://via.placeholder.com/200x280?text=Career+Map" alt="Career Workbook">
+                    </div>
+                    <span class="price-tag">KES 1,200</span>
+                    <h4>Career Mapping Workbook</h4>
+                    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Interactive exercises to discover your strengths and ideal career path.</p>
+                    <a href="https://selar.co/your-link-here" class="btn btn-outline" style="font-size: 12px; width: 100%;">Download PDF</a>
+                </div>
+
+                <!-- Manual 3 -->
+                <div class="resource-card">
+                    <div class="img-frame">
+                        <img src="https://via.placeholder.com/200x280?text=Entrepreneur+Kit" alt="Business Manual">
+                    </div>
+                    <span class="price-tag">KES 2,500</span>
+                    <h4>Start Your Business (SIYB)</h4>
+                    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">The official ILO-SIYB summary guide for aspiring entrepreneurs.</p>
+                    <a href="https://selar.co/your-link-here" class="btn btn-outline" style="font-size: 12px; width: 100%;">Download PDF</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD MAGNET (Free Value) -->
+    <section class="section blue-bg text-center">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 10px;">Not Ready to Buy?</h2>
+            <p style="color: #eee; margin-bottom: 30px;">Download our FREE "Exam Stress Management" checklist.</p>
+            
+            <form style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <input type="email" placeholder="Enter your email" style="flex: 1; min-width: 200px; padding: 15px; border-radius: 5px; border: none;">
+                <button class="btn btn-orange" style="border-radius: 5px; white-space: nowrap;">Get Free PDF</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Thrive360<span>Connect</span></h3>
+                <p>Empowering the next generation.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>info@thrive360connect.com</p>
+                <p>Nairobi, Kenya</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Thrive360Connect.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

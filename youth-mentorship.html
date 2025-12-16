@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Thriving Stars Youth Mentorship | Pre-Teens, Teens & Young Adults | Thrive360Connect</title>
+    <meta name="description" content="Thriving Stars by Thrive360Connect: A premier mentorship program for African Pre-teens, Teens, and Youth. We focus on character development, career guidance, and life skills.">
+    <meta name="keywords" content="Youth Mentorship Kenya, Teen Coaching, Career Guidance for Students, Soft Skills Training, Coach Irene Nyaga, Parenting Support">
+    
+    <!-- Link to Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <!-- Page Specific Styles -->
+    <style>
+        /* Typography Framing */
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Hero Section - Desktop */
+        .youth-hero {
+            position: relative;
+            /* Darker gradient for better text contrast */
+            background: linear-gradient(rgba(2, 11, 28, 0.85), rgba(0, 102, 179, 0.75)), url('images/youth-banner.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            height: 550px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            /* Angled bottom for Desktop only */
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            margin-bottom: 50px;
+        }
+
+        .youth-hero h1 {
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Cohort Cards */
+        .cohort-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            position: relative;
+            border-top: 5px solid transparent;
+        }
+
+        .cohort-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Color Coding for Ages */
+        .cohort-preteens { border-top-color: #10ac84; } /* Green */
+        .cohort-teens { border-top-color: var(--brand-orange); } /* Orange */
+        .cohort-youth { border-top-color: var(--brand-blue); } /* Blue */
+
+        .age-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto 10px auto;
+            font-size: 32px;
+            background: var(--bg-light);
+        }
+
+        /* Parent Promise Section */
+        .promise-box {
+            background: var(--brand-blue);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        .check-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .check-list i {
+            color: var(--brand-orange);
+            margin-top: 5px;
+        }
+
+        /* --- MOBILE FIXES --- */
+        @media (max-width: 768px) {
+            .youth-hero {
+                /* 1. Remove Angle so text has more room */
+                clip-path: none;
+                /* 2. Auto height to fit text */
+                height: auto;
+                min-height: 450px;
+                padding: 80px 20px 60px 20px;
+                margin-bottom: 0;
+                /* 3. Even Darker background for mobile readability */
+                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 50, 100, 0.8)), url('images/youth-banner.jpg');
+                background-position: center;
+            }
+
+            .youth-hero h1 {
+                /* 4. Smaller Font Size */
+                font-size: 32px !important;
+                line-height: 1.3;
+            }
+
+            .youth-hero p {
+                font-size: 16px !important;
+                opacity: 0.9;
+                margin-bottom: 25px;
+            }
+
+            /* Fix Overlap issues */
+            .section {
+                padding: 40px 0;
+            }
+            
+            /* Make Promise Box stack correctly */
+            .promise-box {
+                padding: 25px;
+                text-align: center;
+            }
+            .promise-box .grid-2 {
+                gap: 30px;
+            }
+            .check-list {
+                text-align: left; /* Keep list readable */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Thrive360<span>Connect</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#" style="color: var(--brand-orange);">Our Programs <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="women-coaching.html">Women Coaching</a></li>
+                        <li><a href="youth-mentorship.html" style="color: var(--brand-orange); font-weight: bold;">Youth Mentorship</a></li>
+                        <li><a href="coaches.html">Coaches Program</a></li>
+                    </ul>
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="youth-hero">
+        <div class="container">
+            <span style="text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: 600; color: var(--brand-orange); background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 4px;">Thriving Stars Program</span>
+            
+            <h1 style="margin: 15px 0 20px 0;">Raising the Next Generation<br> of Global Leaders</h1>
+            
+            <p>Beyond grades and exams, we equip your child with the character, confidence, and competence to navigate a changing world.</p>
+            
+            <div style="margin-top: 30px;">
+                <a href="#cohorts" class="btn btn-orange">Find Your Child's Level</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Problem (Addressing Parent Anxiety) -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="text-content">
+                <span class="tag" style="background: var(--brand-blue);">The Challenge</span>
+                <h2 style="color: var(--brand-orange); margin-top: 10px;">Is Academic Success Enough?</h2>
+                <p><strong>Dear Parent,</strong></p>
+                <p>We know you want the best for your child. But in today's digital age, schools focus heavily on academic grades, often leaving gaps in essential life skills.</p>
+                <p>Are you worried about:</p>
+                <ul class="check-list" style="margin-top: 15px; color: #555;">
+                    <li><i class="fas fa-exclamation-circle" style="color: #666;"></i> Lack of direction or motivation?</li>
+                    <li><i class="fas fa-exclamation-circle" style="color: #666;"></i> Negative peer pressure and screen addiction?</li>
+                    <li><i class="fas fa-exclamation-circle" style="color: #666;"></i> How they will transition from school to a career?</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Thriving Stars</strong> bridges this gap. We provide a safe, guided environment for holistic growth.</p>
+            </div>
+            <div class="image-content">
+                <!-- Image of a parent and child talking or a focused student -->
+                <img src="images/youth-study.jpg" alt="Mentorship Session" style="width: 100%; border-radius: 15px; border-bottom: 5px solid var(--brand-cyan); box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <!-- The 3 Cohorts (Segmentation) -->
+    <section id="cohorts" class="section bg-light text-center">
+        <div class="container">
+            <h2>Tailored Support for Every Stage</h2>
+            <p class="subtitle">We don't believe in "one size fits all." Our mentorship is age-appropriate and goal-oriented.</p>
+
+            <div class="cards-grid">
+                
+                <!-- 1. Pre-Teens -->
+                <div class="cohort-card cohort-preteens">
+                    <span class="age-badge" style="background: #10ac84;">Ages 10-12</span>
+                    <div class="icon-circle" style="color: #10ac84;"><i class="fas fa-seedling"></i></div>
+                    <h3>The Explorers</h3>
+                    <p style="padding: 0 20px; font-weight: 600; color: #666;">Self-Discovery & Confidence</p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 20px;">
+                    <ul style="text-align: left; padding: 0 25px 25px 25px; font-size: 13px; list-style: disc; margin-left: 15px;">
+                        <li>Building self-esteem</li>
+                        <li>Effective communication</li>
+                        <li>Navigating early friendships</li>
+                        <li>Responsible tech use</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Teens -->
+                <div class="cohort-card cohort-teens">
+                    <span class="age-badge" style="background: var(--brand-orange);">Ages 13-19</span>
+                    <div class="icon-circle" style="color: var(--brand-orange);"><i class="fas fa-compass"></i></div>
+                    <h3>The Navigators</h3>
+                    <p style="padding: 0 20px; font-weight: 600; color: #666;">Identity & Direction</p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 20px;">
+                    <ul style="text-align: left; padding: 0 25px 25px 25px; font-size: 13px; list-style: disc; margin-left: 15px;">
+                        <li>Emotional intelligence</li>
+                        <li>Study skills & focus</li>
+                        <li>Handling peer pressure</li>
+                        <li>Talent identification</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Youth/Young Adults -->
+                <div class="cohort-card cohort-youth">
+                    <span class="age-badge" style="background: var(--brand-blue);">Ages 18-25+</span>
+                    <div class="icon-circle" style="color: var(--brand-blue);"><i class="fas fa-rocket"></i></div>
+                    <h3>The Architects</h3>
+                    <p style="padding: 0 20px; font-weight: 600; color: #666;">Career & Enterprise</p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 20px;">
+                    <ul style="text-align: left; padding: 0 25px 25px 25px; font-size: 13px; list-style: disc; margin-left: 15px;">
+                        <li>CV writing & Interview skills</li>
+                        <li>Entrepreneurship (ILO-SIYB)</li>
+                        <li>Financial literacy</li>
+                        <li>Global networking</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us / The Promise -->
+    <section class="section">
+        <div class="container">
+            <div class="promise-box">
+                <div class="grid-2">
+                    <div>
+                        <h2 style="color: white; border-bottom: 2px solid var(--brand-orange); display: inline-block; padding-bottom: 10px;">The Thrive Promise</h2>
+                        <p style="margin-top: 15px; opacity: 0.9;">We don't just lecture; we partner with you. Our curriculum uses <strong>Competence-Based Education (CBE)</strong> methods, meaning your child learns by <em>doing</em>, not just listening.</p>
+                        <ul class="check-list" style="margin-top: 20px;">
+                            <li><i class="fas fa-check-circle" style="color: var(--brand-cyan);"></i> <strong>Vetted Mentors:</strong> Professionals with strong moral values.</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--brand-cyan);"></i> <strong>Safe Space:</strong> A non-judgmental environment for growth.</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--brand-cyan);"></i> <strong>Global Outlook:</strong> Preparing them for international standards.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: center;">
+                        <!-- Icon illustration -->
+                        <i class="fas fa-user-graduate" style="font-size: 80px; color: rgba(255,255,255,0.2); margin-bottom: 20px;"></i>
+                        <br>
+                        <a href="https://wa.me/254700000000" class="btn" style="background: white; color: var(--brand-blue); width: 100%;">
+                            <i class="fab fa-whatsapp"></i> Chat with a Counselor
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section text-center">
+        <div class="container">
+            <h2>Invest in Their Future Today</h2>
+            <p class="subtitle">Enrollment is open for our next cohort. Spaces are limited to ensure personalized attention.</p>
+            
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="index.html#contact" class="btn btn-orange">Enroll Your Child</a>
+                <a href="index.html#contact" class="btn btn-outline">Download Brochure</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Thrive360<span>Connect</span></h3>
+                <p>Empowering the next generation.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="women-coaching.html">Women Coaching</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>info@thrive360connect.com</p>
+                <p>Nairobi, Kenya</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Thrive360Connect.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

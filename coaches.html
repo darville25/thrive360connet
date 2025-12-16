@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Train the Trainer | Coaches & Mentors Certification | Thrive360Connect</title>
+    <meta name="description" content="Become a certified mentor and coach with Thrive360Connect. Our 'Train the Trainer' program equips professionals with ILO-SIYB standards to monetize their expertise and impact lives.">
+    <meta name="keywords" content="Train the Trainer Kenya, ILO-SIYB Certification, Become a Business Coach, Mentorship Training, Professional Development for Coaches, Coach Irene Nyaga">
+    
+    <!-- Link to Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <!-- Page Specific Styles -->
+    <style>
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Hero Section */
+        .coaches-hero {
+            position: relative;
+            background: linear-gradient(rgba(2, 11, 28, 0.9), rgba(0, 102, 179, 0.8)), url('images/coaches-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        /* Gold Accreditation Bar */
+        .gold-bar {
+            background: #D4AF37; /* Gold color */
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            color: #444;
+            padding: 15px 0;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+
+        /* Curriculum Roadmap */
+        .roadmap-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        .roadmap-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            width: 4px; height: 100%;
+            background: var(--brand-blue);
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .roadmap-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 45%;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--brand-orange);
+        }
+        /* Alternating sides */
+        .roadmap-item:nth-child(odd) { margin-left: auto; }
+        .roadmap-item:nth-child(even) { margin-right: auto; text-align: right; border-left: none; border-right: 4px solid var(--brand-orange); }
+
+        /* The Dot */
+        .roadmap-item::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px; height: 20px;
+            background: var(--brand-orange);
+            border: 4px solid white;
+            border-radius: 50%;
+            z-index: 3;
+        }
+        .roadmap-item:nth-child(odd)::after { left: -42px; } /* Adjust for center line */
+        .roadmap-item:nth-child(even)::after { right: -42px; }
+
+        /* Feature Icons */
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+        .feature-box:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .roadmap-container::before { left: 20px; }
+            .roadmap-item { width: 100%; margin-left: 0 !important; margin-right: 0 !important; text-align: left !important; padding-left: 50px; border-right: none; border-left: 4px solid var(--brand-orange); }
+            .roadmap-item::after { left: 4px !important; right: auto; }
+            .coaches-hero { height: auto; padding: 100px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Thrive360<span>Connect</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#" style="color: var(--brand-orange);">Our Programs <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="women-coaching.html">Women Coaching</a></li>
+                        <li><a href="youth-mentorship.html">Youth Mentorship</a></li>
+                        <li><a href="coaches.html" style="color: var(--brand-orange); font-weight: bold;">Coaches Program</a></li>
+                    </ul>
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="coaches-hero">
+        <div class="container">
+            <span style="letter-spacing: 2px; text-transform: uppercase; font-size: 14px; color: #ccc;">Train the Trainer (ToT)</span>
+            <h1 style="font-size: 48px; margin: 15px 0;">Turn Your Experience Into <br> Certified Impact</h1>
+            <p style="font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.9;">Stop guessing. Start leading. Master the global standards of mentorship and build a profitable coaching practice with ILO-SIYB certification.</p>
+            <div style="margin-top: 30px;">
+                <a href="#curriculum" class="btn btn-orange">View Curriculum</a>
+                <a href="#contact" class="btn" style="border: 1px solid white; color: white; margin-left: 10px;">Apply to Join</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gold Credibility Bar -->
+    <div class="gold-bar">
+        Accredited by International Labour Organization (ILO-SIYB) Standards
+    </div>
+
+    <!-- The "Why" - Customer Centric -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="image-content">
+                <img src="images/coaches-training.jpg" alt="Corporate Training Session" style="width: 100%; border-radius: 10px; box-shadow: 20px 20px 0 var(--brand-blue);">
+            </div>
+            <div class="text-content">
+                <h2 style="color: var(--brand-blue);">You Have the Knowledge. <br>Now Get the Framework.</h2>
+                <p>Many professionals have decades of experience but struggle to transfer that knowledge effectively. Or perhaps you are already mentoring, but you aren't monetizing your time.</p>
+                <p><strong>The Thrive360Connect Coaches Program</strong> is designed for:</p>
+                <ul style="margin-top: 20px; list-style: none;">
+                    <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--brand-orange);"></i> <strong>Corporate Leaders</strong> wanting to leave a legacy.</li>
+                    <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--brand-orange);"></i> <strong>HR Managers</strong> building internal mentorship structures.</li>
+                    <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--brand-orange);"></i> <strong>Aspiring Consultants</strong> looking for a certified methodology.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Driven Features -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h2>Why Get Certified With Us?</h2>
+            <div class="cards-grid">
+                <div class="feature-box" style="background: white;">
+                    <i class="fas fa-certificate" style="font-size: 40px; color: #D4AF37; margin-bottom: 20px;"></i>
+                    <h4>Global Credibility</h4>
+                    <p>Gain the prestigious ILO-SIYB certification, recognized in over 100 countries.</p>
+                </div>
+                <div class="feature-box" style="background: white;">
+                    <i class="fas fa-chart-line" style="font-size: 40px; color: var(--brand-blue); margin-bottom: 20px;"></i>
+                    <h4>Monetization Strategy</h4>
+                    <p>Learn the "Business of Coaching"—pricing, packaging, and finding high-ticket clients.</p>
+                </div>
+                <div class="feature-box" style="background: white;">
+                    <i class="fas fa-users-cog" style="font-size: 40px; color: var(--brand-cyan); margin-bottom: 20px;"></i>
+                    <h4>Access to Talent</h4>
+                    <p>Get listed in our database and matched with mentees and corporate partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Roadmap -->
+    <section id="curriculum" class="section">
+        <div class="container text-center">
+            <span class="tag" style="background: var(--brand-orange);">The Process</span>
+            <h2 style="margin-bottom: 40px;">Your Roadmap to Mastery</h2>
+            
+            <div class="roadmap-container">
+                <!-- Module 1 -->
+                <div class="roadmap-item">
+                    <h4>1. Foundations of Mentorship</h4>
+                    <p>Understanding the psychology of adult learning (Andragogy) vs pedagogy. Active listening and feedback loops.</p>
+                </div>
+                <!-- Module 2 -->
+                <div class="roadmap-item">
+                    <h4>2. Competence-Based Frameworks</h4>
+                    <p>Moving away from "advice giving" to structured, outcome-based coaching using CBE principles.</p>
+                </div>
+                <!-- Module 3 -->
+                <div class="roadmap-item">
+                    <h4>3. The ILO-SIYB Module</h4>
+                    <p>Specialized training on the 'Start and Improve Your Business' curriculum for entrepreneurship coaching.</p>
+                </div>
+                <!-- Module 4 -->
+                <div class="roadmap-item">
+                    <h4>4. The Business of Coaching</h4>
+                    <p>Personal branding, contract drafting, ethical standards, and client acquisition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Pricing Teaser -->
+    <section class="section blue-bg text-center">
+        <div class="container">
+            <h2 style="color: white;">Join the League of Certified Mentors</h2>
+            <p style="color: #eee; max-width: 600px; margin: 0 auto 30px auto;">
+                Stop giving away your expertise for free. Learn to structure, deliver, and charge for the value you provide.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="https://wa.me/254700000000?text=Hi%20Thrive360,%20I%20am%20interested%20in%20the%20Coaches%20Training" class="btn btn-orange">
+                    <i class="fab fa-whatsapp"></i> Inquire About Next Intake
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Thrive360<span>Connect</span></h3>
+                <p>Empowering the next generation.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="coaches.html">Coaches Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>info@thrive360connect.com</p>
+                <p>Nairobi, Kenya</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Thrive360Connect.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

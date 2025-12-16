@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrive 360° Women's Holistic Coaching | Thrive360Connect.com</title>
+    
+    <!-- Link to Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <!-- Page Specific Styles for "Elegant Framing" -->
+    <style>
+        /* 1. Elegant Font for Headings */
+        h1, h2, .script-font {
+            font-family: 'Playfair Display', serif; /* Adds a touch of class */
+        }
+        
+        /* 2. Hero Adjustments */
+        .page-header {
+            position: relative;
+            background: linear-gradient(rgba(2, 11, 28, 0.7), rgba(0, 102, 179, 0.6)), url('images/women-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 450px; /* Taller hero */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Angled bottom */
+        }
+
+        /* 3. "Is This You?" Checklist Cards */
+        .pain-point-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: -50px; /* Overlap effect */
+            position: relative;
+            z-index: 10;
+        }
+        .pain-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            border-bottom: 3px solid var(--brand-orange);
+        }
+
+        /* 4. Soft Pillar Cards */
+        .holistic-card {
+            background: #fff;
+            border-radius: 20px 0 20px 0; /* Unique shape */
+            padding: 40px 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            border: 1px solid #f0f0f0;
+        }
+        .holistic-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--brand-cyan);
+        }
+        
+        /* 5. Wave Divider (Visual Framing) */
+        .wave-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .wave-container svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+        .section-curve {
+            position: relative;
+            background: var(--bg-light);
+            padding-bottom: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .page-header { clip-path: none; height: 350px; }
+            .pain-point-grid { grid-template-columns: 1fr; margin-top: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Thrive360<span>Connect</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#" style="color: var(--brand-orange);">Our Programs <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="women-coaching.html">Thrive 360° - Holistic Wellness Women Coaching</a></li>
+                        <li><a href="youth-mentorship.html">Thriving Stars - Pre-Teens, Teens & Youth</a></li>
+                        <li><a href="coaches.html">Coaches & Mentors Programs</a></li>
+                    </ul>
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header (With Angled Bottom) -->
+    <header class="page-header">
+        <div class="container">
+            <span style="letter-spacing: 3px; text-transform: uppercase; font-size: 14px; opacity: 0.9;">Signature Program</span>
+            <h1 style="font-size: 48px; margin: 10px 0;">Thrive 360° Woman</h1>
+            <p style="font-size: 22px; font-weight: 300;">From Overwhelmed to Overflowing.</p>
+        </div>
+    </header>
+
+    <!-- "Is This You?" Overlap Section -->
+    <div class="container">
+        <div class="pain-point-grid">
+            <div class="pain-card">
+                <i class="fas fa-battery-quarter" style="font-size: 30px; color: #666; margin-bottom: 15px;"></i>
+                <h4>Feeling Drained?</h4>
+                <p style="font-size: 14px; color: #666;">You give 100% at work and home, leaving nothing for yourself at the end of the day.</p>
+            </div>
+            <div class="pain-card">
+                <i class="fas fa-mask" style="font-size: 30px; color: #666; margin-bottom: 15px;"></i>
+                <h4>Imposter Syndrome?</h4>
+                <p style="font-size: 14px; color: #666;">Despite your achievements, you secretly fear you aren't "qualified enough" to lead.</p>
+            </div>
+            <div class="pain-card">
+                <i class="fas fa-compass" style="font-size: 30px; color: #666; margin-bottom: 15px;"></i>
+                <h4>Lost Direction?</h4>
+                <p style="font-size: 14px; color: #666;">You've climbed the ladder, but now you're wondering, "Is this all there is?"</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Solution / Intro -->
+    <section class="section">
+        <div class="container grid-2">
+            <div class="text-content">
+                <h2 style="color: var(--brand-blue);">It's Time to Reclaim Your 360° Life</h2>
+                <p class="lead" style="font-size: 18px; color: var(--brand-orange); font-weight: 500;">Success shouldn't cost you your sanity.</p>
+                <p>Thrive 360° is a holistic coaching intervention designed for the modern African woman. We move beyond standard career advice to address the <strong>whole person</strong>.</p>
+                <p>Coach Irene Nyaga uses her signature "Wholesome Wellness" framework to help you harmonize your mental ambition with your emotional and physical reality.</p>
+                <a href="#framework" class="btn btn-outline" style="margin-top: 20px;">See the Framework</a>
+            </div>
+            <div class="image-content">
+                <div style="position: relative;">
+                    <img src="images/women-wellness.jpg" alt="Happy Women" style="width: 100%; border-radius: 20px;">
+                    <!-- Floating Badge -->
+                    <div style="position: absolute; bottom: -20px; right: -20px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <div>
+                            <strong style="display: block; line-height: 1;">Top Rated</strong>
+                            <span style="font-size: 12px; color: #888;">Women's Program</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 4 Pillars (With Curved Background) -->
+    <section class="section section-curve" id="framework">
+        <!-- SVG Wave Top -->
+        <div style="position: absolute; top: -50px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg);">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+
+        <div class="container text-center">
+            <h2 style="margin-bottom: 10px;">The Wholesome Wellness Framework</h2>
+            <p class="subtitle">A 360-degree approach to building a sustainable life.</p>
+            
+            <div class="cards-grid">
+                <!-- Pillar 1 -->
+                <div class="holistic-card">
+                    <i class="fas fa-brain" style="font-size: 40px; color: var(--brand-blue); margin-bottom: 20px;"></i>
+                    <h4>Mental Clarity</h4>
+                    <p>Silence the inner critic. We use cognitive reframing tools to shift you from "overthinking" to "strategic execution."</p>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="holistic-card">
+                    <i class="fas fa-heart" style="font-size: 40px; color: var(--brand-orange); margin-bottom: 20px;"></i>
+                    <h4>Emotional Intelligence</h4>
+                    <p>Learn to manage stress, navigate complex relationships, and lead with empathy without carrying the world's weight.</p>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="holistic-card">
+                    <i class="fas fa-briefcase" style="font-size: 40px; color: var(--brand-cyan); margin-bottom: 20px;"></i>
+                    <h4>Career Strategy</h4>
+                    <p>Build your personal brand, negotiate your worth, and step into rooms you previously thought were closed to you.</p>
+                </div>
+                <!-- Pillar 4 -->
+                <div class="holistic-card">
+                    <i class="fas fa-spa" style="font-size: 40px; color: #10ac84; margin-bottom: 20px;"></i>
+                    <h4>Physical Vitality</h4>
+                    <p>You cannot pour from an empty cup. We integrate rest protocols and health habits into your busy schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Break -->
+    <section style="background: var(--brand-blue); padding: 80px 0; color: white; text-align: center;">
+        <div class="container">
+            <i class="fas fa-quote-left" style="font-size: 40px; opacity: 0.3; margin-bottom: 20px;"></i>
+            <h3 style="font-size: 28px; font-weight: 300; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                "A woman who heals herself, heals her family, heals her workplace, and heals her community. It starts with you."
+            </h3>
+            <p style="margin-top: 20px; font-weight: 700;">— Coach Irene Nyaga</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section text-center">
+        <div class="container">
+            <h2>Start Your Transformation</h2>
+            <p class="subtitle">Select the path that fits your current season of life.</p>
+
+            <div class="grid-2" style="align-items: stretch; max-width: 900px; margin: 0 auto;">
+                <!-- Option 1 -->
+                <div class="card" style="border: 2px solid var(--brand-orange);">
+                    <h3>1-on-1 Coaching</h3>
+                    <p>For the executive woman needing privacy and tailored strategy.</p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                    <a href="https://wa.me/254700000000" class="btn btn-orange">Apply for 1-on-1</a>
+                </div>
+                <!-- Option 2 -->
+                <div class="card" style="border: 2px solid var(--brand-blue);">
+                    <h3>Group Cohort</h3>
+                    <p>For the woman seeking community, shared learning, and networking.</p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                    <a href="index.html#contact" class="btn btn-primary">Join Waitlist</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Thrive360<span>Connect</span></h3>
+                <p>Bridging the gap between education and the global workforce.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="women-coaching.html">Women Coaching</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                <p><i class="fas fa-envelope"></i> info@thrive360connect.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Thrive360Connect.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
