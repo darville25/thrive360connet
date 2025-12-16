@@ -1,0 +1,604 @@
+/* =========================================
+   1. GLOBAL RESET & VARIABLES
+   ========================================= */
+:root {
+    /* BRAND COLORS */
+    --brand-orange: #F37021;  
+    --brand-blue: #0066B3;    
+    --brand-cyan: #00AEEF;    
+    
+    /* NEUTRALS */
+    --dark-bg: #020b1c;       
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #f4f8fb;      
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul { list-style: none; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center { text-align: center; }
+.bg-light { background-color: var(--bg-light); }
+
+/* Backgrounds */
+.blue-bg, .purple-bg { 
+    background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan)); 
+    color: white; 
+}
+
+/* =========================================
+   2. NAVIGATION (DESKTOP)
+   ========================================= */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo h1 {
+    color: var(--brand-orange);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.logo span { color: var(--brand-cyan); }
+
+/* Hamburger Menu (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: var(--brand-orange);
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li { position: relative; }
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--brand-blue);
+    padding: 10px 0;
+}
+
+.nav-links a:hover { color: var(--brand-orange); }
+
+/* Dropdown CSS (Desktop) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 280px; /* Wider for long program names */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+    padding: 10px 0;
+    border-top: 3px solid var(--brand-orange);
+}
+
+.dropdown-content li a {
+    padding: 10px 20px;
+    display: block;
+    color: var(--text-dark);
+    font-size: 13px;
+}
+
+.dropdown-content li a:hover {
+    background-color: var(--bg-light);
+    color: var(--brand-orange);
+}
+
+/* Show Dropdown on Hover (Desktop) */
+.dropdown:hover .dropdown-content { display: block; }
+
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--brand-blue); /* Fallback */
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* =========================================
+   4. GENERAL SECTIONS
+   ========================================= */
+.section { padding: 60px 0; }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.section h2 {
+    color: var(--brand-orange);
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.subtitle {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    color: var(--text-light);
+}
+
+/* Images & Icons */
+.circle-illustration {
+    font-size: 150px;
+    color: var(--brand-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed var(--brand-orange);
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.grid-faces img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--brand-cyan);
+}
+
+/* =========================================
+   5. CARDS & CTA
+   ========================================= */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-bottom: 3px solid var(--brand-orange);
+}
+
+.icon-lg {
+    font-size: 40px;
+    color: var(--brand-blue);
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background: var(--white);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--brand-orange);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.cta-box {
+    padding: 40px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
+    color: white;
+}
+
+.cta-box ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--brand-blue);
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-primary:hover { background: var(--brand-orange); }
+
+.btn-orange {
+    background: var(--brand-orange);
+    color: white;
+}
+
+.btn-orange:hover { background: var(--brand-blue); }
+
+.btn-outline {
+    border: 2px solid var(--brand-blue);
+    color: var(--brand-blue);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn-outline:hover {
+    background-color: var(--brand-blue);
+    color: white;
+}
+
+/* =========================================
+   6. BOOK SECTION (3D EFFECT)
+   ========================================= */
+.book-section {
+    background-color: var(--bg-light);
+    overflow: hidden;
+}
+
+.book-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.book-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.book-image img {
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.25); 
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+    transform: perspective(1000px) rotateY(-10deg);
+    transition: transform 0.5s ease;
+}
+
+.book-image:hover img {
+    transform: perspective(1000px) rotateY(0deg) scale(1.02);
+}
+
+.blob-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(0, 174, 239, 0.2), rgba(243, 112, 33, 0.1));
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(40px);
+}
+
+.book-content { flex: 1.2; }
+
+.tag {
+    background-color: var(--brand-cyan);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.book-content h2 { color: var(--brand-blue); font-size: 28px; }
+.book-title { font-size: 42px; color: var(--brand-orange); font-weight: 800; line-height: 1.2; }
+.author { font-size: 18px; color: var(--text-light); font-style: italic; margin-bottom: 20px; }
+
+.book-points li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.book-points i { color: var(--brand-cyan); }
+.book-actions { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+
+/* =========================================
+   7. PROCESS, PROGRAMS & FOOTER
+   ========================================= */
+/* Process */
+.process-section {
+    background-color: var(--dark-bg);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.steps-grid {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step-item {
+    text-align: center;
+    color: white;
+    width: 200px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-high { margin-top: -40px; }
+.step-low { margin-top: 40px; }
+
+.step-box {
+    width: 60px; height: 60px; line-height: 60px;
+    margin: 0 auto 20px auto; border-radius: 12px;
+    font-size: 24px; font-weight: 700; color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.color-1 { background: linear-gradient(135deg, var(--brand-orange), #ff9f43); }
+.color-2 { background: linear-gradient(135deg, var(--brand-blue), #2e86de); }
+.color-3 { background: linear-gradient(135deg, var(--brand-cyan), #48dbfb); }
+.color-4 { background: linear-gradient(135deg, #1dd1a1, #10ac84); }
+
+.step-item h4 { color: var(--brand-cyan); margin-bottom: 10px; }
+.step-item p { font-size: 13px; color: #b0b0d0; }
+
+.steps-grid::after {
+    content: '';
+    position: absolute;
+    top: 50px; left: 10%; right: 10%;
+    height: 2px;
+    border-top: 2px dashed rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+/* Programs */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.program-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--brand-blue);
+}
+
+.program-item i { color: var(--brand-orange); font-size: 24px; margin-bottom: 10px; }
+
+/* Contact Form */
+.contact-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-top: 30px;
+    border-top: 5px solid var(--brand-orange);
+}
+
+.form-row { display: flex; gap: 20px; }
+.form-group { margin-bottom: 20px; width: 100%; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+.form-group input, .form-group textarea {
+    width: 100%; padding: 10px;
+    border: 1px solid #ddd; border-radius: 4px;
+    background: #f4f6f8;
+}
+
+/* Footer */
+.footer {
+    background: #050510;
+    color: #aaa;
+    padding: 60px 0 20px 0;
+    font-size: 14px;
+    border-top: 3px solid var(--brand-orange);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer h3 { color: var(--brand-orange); margin-bottom: 20px; font-size: 20px; }
+.footer h4 { color: var(--white); margin-bottom: 20px; }
+.socials i { font-size: 20px; margin-right: 15px; color: var(--white); }
+.footer-bottom { text-align: center; border-top: 1px solid #222; padding-top: 20px; }
+
+
+/* =========================================
+   8. MOBILE RESPONSIVENESS (PHONES & TABLETS)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* Navbar Adjustment */
+    .navbar { padding: 0 15px; }
+    .nav-container { padding: 0; }
+
+    /* Show Hamburger */
+    .menu-toggle { display: block; }
+
+    /* Nav Links Container (Collapsible) */
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        border-top: 1px solid #eee;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+        
+        /* CLOSED STATE */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    /* OPEN STATE (Triggered by JS) */
+    .nav-links.active {
+        max-height: 2000px; /* Large enough for all dropdowns */
+        padding-bottom: 20px;
+    }
+
+    .nav-links li { width: 100%; text-align: left; }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 25px;
+        border-bottom: 1px solid #f4f4f4;
+        width: 100%;
+        color: var(--text-dark);
+    }
+
+    /* Mobile Dropdowns */
+    .dropdown-content {
+        position: relative; /* Push content down */
+        box-shadow: none;
+        background-color: #f9f9fc;
+        width: 100%;
+        top: 0;
+        border-top: none;
+        padding-left: 20px;
+        display: none; /* Hidden by default */
+    }
+
+    /* Show dropdown when parent is hovered or touched */
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content li a {
+        color: var(--brand-blue);
+        padding: 12px 25px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* General Layout Stacking */
+    .grid-2, 
+    .footer-grid, 
+    .programs-grid, 
+    .book-wrapper, 
+    .form-row,
+    .steps-grid {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Hero */
+    .hero {
+        height: auto;
+        min-height: 400px;
+        padding: 60px 20px;
+    }
+    .hero h1 { font-size: 32px; }
+
+    /* Process Steps (Remove Wave) */
+    .step-high, .step-low { margin-top: 0; }
+    .steps-grid::after { display: none; }
+
+    /* Book Section (Remove 3D) */
+    .book-wrapper { text-align: center; }
+    .book-image img { 
+        max-width: 250px; 
+        transform: none !important; /* Force 3D off */
+    }
+    .book-actions { justify-content: center; }
+    .blob-bg { width: 250px; height: 250px; }
+}
+/* Add this to your style.css if the logo color looks plain in the footer */
+.footer h3 span {
+    color: var(--brand-cyan); /* Makes 'Connect' blue */
+}
+
+.footer h3 {
+    color: var(--brand-orange); /* Makes 'Thrive360' orange */
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
