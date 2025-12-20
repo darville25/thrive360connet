@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# 1. To manually remove the .html extension from the URL in the browser
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# 2. To internally forward the clean URL to the .html file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
