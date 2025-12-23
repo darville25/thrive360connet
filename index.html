@@ -80,45 +80,42 @@
 </head>
 <body>
 
-    <!-- Updated Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <h1>Thrive360<span>Connect</span></h1>
-            </div>
-
-            <!-- Mobile Toggle -->
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <!-- Updated Links -->
-            <ul class="nav-links">
-                <!-- Single Dropdown for Home/About -->
-                <li class="dropdown">
-                    <a href="#" style="color: var(--brand-orange);">Home <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </li>
-
-                <!-- Independent Links -->
-                <li><a href="women-coaching.html">Women Coaching</a></li>
-                
-                <!-- Note: Pointing both to youth-mentorship.html as per your existing structure, 
-                     but you can change links if you create separate pages for Teens vs Youth -->
-                <li><a href="youth-mentorship.html">Teens Mentorship</a></li>
-                <li><a href="youth-mentorship.html">Youth Mentorship</a></li>
-                
-                <li><a href="coaches.html">Coaches & Mentors</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="events.html">Events & Gallery</a></li>
-                
-                <li><a href="#contact" class="btn-nav-contact">Contact Us</a></li>
-            </ul>
+    <!-- Navigation with Icon Logo -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <!-- Using your existing apple-touch-icon for better quality -->
+                <img src="images/apple-touch-icon.png" alt="Thrive360 Logo" class="nav-icon">
+            </a>
         </div>
-    </nav>
+
+        <!-- Mobile Toggle -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Shortened Links -->
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#" style="color: var(--brand-orange);">Home/About <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </li>
+
+            <li><a href="women-coaching.html">Women</a></li>
+            <li><a href="youth-mentorship.html">Teens</a></li>
+            <li><a href="youth-mentorship.html">Youth</a></li>
+            <li><a href="coaches.html">Mentors</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="events.html">Gallery</a></li>
+            
+            <li><a href="#contact" class="btn-nav-contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
     <!-- Improved Hero Section -->
     <header class="hero">

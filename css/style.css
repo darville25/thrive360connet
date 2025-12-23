@@ -802,3 +802,49 @@ ul { list-style: none; }
     }
     .nav-links.active { display: flex; }
 }
+/* Logo Icon Styling */
+.nav-icon {
+    height: 45px; /* Adjust this to make it smaller or larger */
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar Layout Tweak */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Tightening the navigation to fit everything */
+.nav-links {
+    gap: 10px; /* Minimal space between items */
+}
+
+.nav-links li a {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: -0.2px; /* Slight letter squeeze to save space */
+}
+
+.btn-nav-contact {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+}
+
+/* Ensure dropdown doesn't get cut off */
+.dropdown-content {
+    min-width: 120px;
+}
+
+@media (max-width: 1000px) {
+    .menu-toggle { display: block; }
+    .nav-links { display: none; }
+    .nav-links.active { display: flex; flex-direction: column; background: #fff; }
+}
