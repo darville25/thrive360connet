@@ -771,52 +771,93 @@ ul { list-style: none; }
         margin-bottom: 10px;
     }
 }
-/* Ensure the navbar items stay on one line */
+/* Logo Styling */
+.nav-icon {
+    height: 40px; /* Small, clean icon */
+    width: auto;
+    display: block;
+}
+
+/* Flexbox Layout for the many links */
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0;
+    padding: 10px 15px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 12px; /* Tight gap for many items */
+    gap: 8px; /* Tight gap to fit 8 items */
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li a {
-    font-size: 13px; /* Slightly smaller to fit the long list */
+    font-size: 13px; /* Smaller font to accommodate long labels */
     font-weight: 600;
-    white-space: nowrap; /* Prevents text from wrapping to 2 lines */
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
+    white-space: nowrap; /* Prevents labels like "Women Coaching" from breaking into 2 lines */
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-/* Specific button styling for the last item */
+/* Hover effect */
+.nav-links li a:hover {
+    color: var(--brand-orange);
+}
+
+/* Contact Button Styling */
 .btn-nav-contact {
-    padding: 8px 14px !important;
+    padding: 6px 12px !important;
     background: var(--brand-orange);
     color: white !important;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 12px !important;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 1100px) {
-    .menu-toggle { display: block; }
+/* Mobile Breakpoint - switch to hamburger menu earlier because there are many links */
+@media (max-width: 1200px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+    
     .nav-links {
-        display: none;
+        display: none; /* Hide links on smaller screens */
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
         width: 100%;
         background: white;
         flex-direction: column;
-        padding: 20px;
+        gap: 0;
         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
         z-index: 1000;
     }
-    .nav-links.active { display: flex; }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: #f9f9f9;
+        padding-left: 20px;
+    }
 }
