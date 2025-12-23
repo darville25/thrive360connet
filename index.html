@@ -80,7 +80,7 @@
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Updated Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
@@ -92,27 +92,29 @@
                 <i class="fas fa-bars"></i>
             </div>
 
-            <!-- Links -->
+            <!-- Updated Links -->
             <ul class="nav-links">
-                <li><a href="index.html" style="color: var(--brand-orange);">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <!-- Single Dropdown for Home/About -->
                 <li class="dropdown">
-                    <a href="#">Our Programs <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" style="color: var(--brand-orange);">Home <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-content">
-                        <li><a href="women-coaching.html">Thrive 360° - Holistic Wellness Women Coaching</a></li>
-                        <li><a href="youth-mentorship.html">Thriving Stars - Pre-Teens, Teens & Youth</a></li>
-                        <li><a href="coaches.html">Coaches & Mentors Programs</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                    <a href="resources.html">Resources <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="resources.html">Books & Manuals</a></li>
-                    </ul>
-                </li>
+                <!-- Independent Links -->
+                <li><a href="women-coaching.html">Women Coaching</a></li>
                 
+                <!-- Note: Pointing both to youth-mentorship.html as per your existing structure, 
+                     but you can change links if you create separate pages for Teens vs Youth -->
+                <li><a href="youth-mentorship.html">Teens Mentorship</a></li>
+                <li><a href="youth-mentorship.html">Youth Mentorship</a></li>
+                
+                <li><a href="coaches.html">Coaches & Mentors</a></li>
+                <li><a href="resources.html">Resources</a></li>
                 <li><a href="events.html">Events & Gallery</a></li>
+                
                 <li><a href="#contact" class="btn-nav-contact">Contact Us</a></li>
             </ul>
         </div>
