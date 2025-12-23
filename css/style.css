@@ -771,3 +771,34 @@ ul { list-style: none; }
         margin-bottom: 10px;
     }
 }
+/* Ensure the nav links don't wrap or overlap with many items */
+.nav-links {
+    gap: 15px; /* Adjust spacing between items */
+}
+
+.nav-links li a {
+    font-size: 14px; /* Slightly smaller font to fit all items in one row */
+    white-space: nowrap; /* Prevents links from breaking into two lines */
+}
+
+/* Adjust the dropdown specifically for the new Home/About layout */
+.dropdown-content {
+    min-width: 150px;
+}
+
+@media (max-width: 1100px) {
+    /* Switch to mobile hamburger menu earlier because of the many links */
+    .menu-toggle { display: block; }
+    .nav-links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .nav-links.active { display: flex; }
+}
