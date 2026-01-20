@@ -3,124 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under Maintenance | Thrive360Connect</title>
     
-    <!-- Fonts & Icons -->
+    <!-- SEO Optimization -->
+    <title>Thrive360Connect | African Youth Mentorship & Career Coaching</title>
+    <meta name="description" content="Unlock your potential with Thrive360Connect. The premier mentorship platform for African youth, women, and entrepreneurs founded by Coach Irene Nyaga.">
+    <meta name="keywords" content="Mentorship Africa, Coach Irene Nyaga, Youth Empowerment, Career Coaching Kenya, TVET Training, Business Development">
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Fonts: Adding Playfair Display for "Framing" -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 
+    <!-- Page Specific CSS (Enhancements) -->
     <style>
-        /* BRAND COLORS */
-        :root {
-            --brand-orange: #F37021;
-            --brand-blue: #0066B3;
-            --text-dark: #333;
-        }
+        /* Typography Upgrade */
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        /* Hero with Clear Image */
+.hero {
+    position: relative;
+    /* Removed the heavy linear-gradient overlay */
+    background: url('images/banner.webp'); 
+    background-size: cover;
+    background-position: center;
+    height: 600px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    /* Added a very subtle text shadow to the whole container for legibility */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+/* Optional: Adding a light "vignette" to ensure text doesn't get lost if image is very bright */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Very thin 20% dark tint */
+    z-index: 1;
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f8fb;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--text-dark);
-            padding: 20px;
-        }
+.hero-content {
+    position: relative;
+    z-index: 2; /* Keeps text above the vignette */
+}
 
-        .container {
+        /* Stats Authority Bar */
+        .stats-bar {
             background: white;
-            padding: 50px 30px;
-            border-radius: 15px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            max-width: 600px;
-            width: 100%;
-            border-top: 5px solid var(--brand-orange);
+            padding: 40px 0;
+            margin-top: -60px; /* Overlap effect */
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 3px solid var(--brand-orange);
         }
+        .stat-item h3 { font-size: 36px; color: var(--brand-blue); margin-bottom: 5px; }
+        .stat-item p { font-size: 14px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
 
-        .icon-box {
-            font-size: 60px;
-            color: var(--brand-blue);
-            margin-bottom: 20px;
-            animation: float 3s ease-in-out infinite;
+        /* Testimonials Section */
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: left;
+            border-left: 4px solid var(--brand-orange);
         }
+        .quote-icon { font-size: 30px; color: var(--brand-cyan); opacity: 0.3; margin-bottom: 15px; }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-            color: var(--brand-blue);
-        }
-
-        p {
-            font-size: 16px;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            background: var(--brand-orange);
-            color: white;
-            text-decoration: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: 600;
-            display: inline-block;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: var(--brand-blue);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .contact-info {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #888;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-        }
-
-        .contact-info a {
-            color: var(--brand-orange);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero { clip-path: none; height: 500px; }
+            .hero-btn-group { flex-direction: column; gap: 10px; }
+            .stats-bar { margin-top: 0; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="icon-box">
-            <i class="fas fa-tools"></i>
+ <!-- Updated Navigation: Resources & Gallery moved to Footer -->
+<nav class="navbar">
+    <div class="container nav-container" style="max-width: 1300px;">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/apple-touch-icon.png" alt="Thrive360" class="nav-icon" style="height: 45px; width: auto;">
+            </a>
         </div>
-        
-        <h1>We Are Upgrading!</h1>
-        
-        <p>
-            Thrive360Connect is currently undergoing scheduled maintenance to serve you better. 
-            We are uploading new resources and improving your experience.
+
+        <!-- Mobile Toggle -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="nav-links">
+            <!-- The Only Dropdown -->
+            <li class="dropdown">
+                <a href="#" style="color: var(--brand-orange);">Home <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </li>
+
+            <!-- Independent Links -->
+            <li><a href="women-coaching.html">Women Coaching</a></li>
+            <li><a href="youth-mentorship.html">Teens Mentorship</a></li>
+            <li><a href="youth-mentorship.html">Youth Mentorship</a></li>
+            <li><a href="coaches.html">Coaches & Mentors</a></li>
+            
+            <li><a href="index.html#contact" class="btn-nav-contact">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- SEO Optimized Hero Section -->
+<header class="hero">
+    <div class="container hero-content">
+        <!-- Tagline (Optimized as H1 for SEO) -->
+        <h1 style="font-size: 42px; line-height: 1.2; margin-bottom: 20px; text-shadow: 3px 3px 15px rgba(0,0,0,0.9);">
+            Holistic Thriving Ladies; <br>
+            <span style="color: var(--brand-orange);">Purposeful Youths & Teens</span>, <br>
+            Equipped Mentors & Coaches.
+        </h1>
+
+        <!-- Sub-Line (Service Keywords for SEO) -->
+        <p style="font-size: 19px; font-weight: 500; max-width: 900px; margin: 0 auto 35px auto; text-shadow: 2px 2px 10px rgba(0,0,0,1); line-height: 1.6;">
+            Holistic Wellness Coaching for Women | Mentorship for Youth & Teens | 
+            Coaching for Emerging Mentors & Coaches
         </p>
-        
-        <p>We will be back online shortly.</p>
 
-        <a href="mailto:info@thrive360connect.com" class="btn">Contact Us via Email</a>
-
-        <div class="contact-info">
-            Need urgent assistance? <br>
-            WhatsApp us at: <a href="https://wa.me/254723312435">+254 723 312 435</a>
+        <!-- Action Buttons -->
+        <div class="hero-btn-group">
+            <a href="#contact" class="btn btn-orange">Join Our Community</a>
+            <a href="about.html" class="btn" style="background: rgba(0,0,0,0.4); border: 2px solid white; color: white; backdrop-filter: blur(4px);">
+                Learn Our Story
+            </a>
         </div>
     </div>
+</header>
+
+    <!-- Stats Authority Bar (New) -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="grid-2" style="grid-template-columns: repeat(4, 1fr); text-align: center;">
+                <div class="stat-item">
+                    <h3>20+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1,000+</h3>
+                    <p>Lives Impacted</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4</h3>
+                    <p>Core Programs</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Certified Trainers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Refined) -->
+    <section class="section about">
+        <div class="container grid-2">
+            <div class="text-content">
+                <span class="tag">Who We Are</span>
+                <h2 style="color: var(--brand-blue);">Bridging the Gap</h2>
+                <p>Thrive360Connect is more than a platform; it is a movement. Led by the philosophy of <strong>Coach Irene Nyaga</strong>, we recognize a critical disconnect: brilliant young minds graduating with degrees but lacking the soft skills and networks to succeed.</p>
+                <p>We provide African youth with access to invaluable resources, <strong>Competence-Based Education (CBE)</strong> principles, and international mentors.</p>
+                <a href="about.html" class="btn btn-outline" style="margin-top: 15px;">Read Our Story</a>
+            </div>
+            <div class="image-content">
+                <!-- Layered Image Effect -->
+                <div style="position: relative; padding: 15px;">
+                    <img src="images/coach-irene.png.png" alt="Coach Irene Nyaga" style="width: 100%; border-radius: 10px; position: relative; z-index: 2; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <!-- Decorative BG Box -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 3px solid var(--brand-orange); border-radius: 10px; transform: translate(-15px, -15px); z-index: 1;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Overview (Improved Grid) -->
+    <section id="programs" class="section bg-light text-center">
+        <div class="container">
+            <h2>Our Core Pillars</h2>
+            <p class="subtitle">We focus on the holistic development of the individual.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-venus icon-lg" style="color: var(--brand-orange);"></i>
+                    <h3>Women Coaching</h3>
+                    <p>Holistic wellness and leadership strategies for the modern woman.</p>
+                    <a href="women-coaching.html" style="color: var(--brand-blue); font-weight: 600; font-size: 13px;">Learn More &rarr;</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-rocket icon-lg" style="color: var(--brand-blue);"></i>
+                    <h3>Teen Mentorship</h3>
+                    <p>Equipping teenagers with character development, academic guidance, and the life skills needed to navigate critical growth years.</p>
+                    <a href="youth-mentorship.html" style="color: var(--brand-blue); font-weight: 600; font-size: 13px;">Learn More &rarr;</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-briefcase icon-lg" style="color: var(--brand-cyan);"></i>
+                    <h3>Business Development</h3>
+                    <p>ILO-SIYB certified training for aspiring entrepreneurs.</p>
+                    <a href="coaches.html" style="color: var(--brand-blue); font-weight: 600; font-size: 13px;">Learn More &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Featured Book Section (3D Effect) -->
+    <section id="books" class="section book-section">
+        <div class="container">
+            <div class="book-wrapper">
+                <div class="book-image">
+                    <!-- Ensure book-cover.png.png exists in your images folder -->
+                    <img src="images/book-cover.png.png" alt="Beyond The Grades Book">
+                    <div class="blob-bg"></div>
+                </div>
+                <div class="book-content">
+                    <span class="tag">Best Seller</span>
+                    <h2>Find Purpose Beyond Results</h2>
+                    <h3 class="book-title">Beyond The Grades</h3>
+                    <p class="author">By Coach Irene Nyaga Elijah</p>
+                    <p class="book-desc">
+                        Are you defined by your academic performance? In a world obsessed with scores, 
+                        <strong>Beyond The Grades</strong> offers a refreshing roadmap to discovering your true potential.
+                    </p>
+                    
+                    <div class="book-actions">
+                        <!-- Option 1: Buy Soft Copy (Instant PDF via Selar) -->
+                        <!-- REPLACE '#' with your specific Selar link -->
+                        <a href=" https://selar.com/w76cb92177" target="_blank" class="btn btn-orange">
+                            <i class="fas fa-download"></i> Buy Soft Copy (KES 800)
+                        </a>
+                        
+                        <!-- Option 2: Order Hard Copy (Via WhatsApp) -->
+                        <a href="https://wa.me/254723312435?text=Hi%20Coach%20Irene,%20I%20would%20like%20to%20order%20a%20Hard%20Copy%20of%20Beyond%20The%20Grades" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-truck"></i> Hard Copy (KES 1,000)
+                        </a>
+                    </div>
+
+                    <!-- Trust Badge -->
+                    <p style="font-size: 12px; margin-top: 15px; color: #666;">
+                        <i class="fas fa-lock" style="color: #10ac84;"></i> Secure Payment via M-PESA. Instant PDF Delivery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We Do That (Process) -->
+    <section class="section dark-bg process-section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2 style="color: white;">The Thrive Journey</h2>
+                <p style="color: #ccc;">How we take you from where you are to where you want to be.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item step-low">
+                    <div class="step-box color-1">01</div>
+                    <h4>Connect</h4>
+                    <p>Join our network and find your tribe.</p>
+                </div>
+                <div class="step-item step-high">
+                    <div class="step-box color-2">02</div>
+                    <h4>Learn</h4>
+                    <p>Engage in competence-based training.</p>
+                </div>
+                <div class="step-item step-low">
+                    <div class="step-box color-3">03</div>
+                    <h4>Mentor</h4>
+                    <p>Get matched with global experts.</p>
+                </div>
+                <div class="step-item step-high">
+                    <div class="step-box color-4">04</div>
+                    <h4>Thrive</h4>
+                    <p>Achieve certification and career success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories (New) -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">Success Stories</h2>
+            <div class="grid-2">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p><em>"Thrive360Connect changed my perspective on my career. The mentorship I received helped me transition from a confused graduate to a confident entrepreneur."</em></p>
+                    <div style="margin-top: 15px; font-weight: 700; color: var(--brand-blue);">- Sarah K., Nairobi</div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p><em>"Coach Irene's approach to holistic wellness saved me from burnout. I am now a better leader and a happier person."</em></p>
+                    <div style="margin-top: 15px; font-weight: 700; color: var(--brand-blue);">- Joyce M., Corporate Leader</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section">
+        <div class="container contact-wrapper">
+            <div class="text-center">
+                <h2>Get Involved</h2>
+                <p>Ready to push your boundaries? Send us a message.</p>
+            </div>
+            
+            <!-- UPDATE 1: Add action="..." and method="POST" -->
+            <!-- REPLACE 'YOUR_FORMSPREE_ID' with the link you got from Step 1 -->
+            <form action="https://formspree.io/f/xwveeaep" method="POST" class="contact-form">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <!-- UPDATE 2: Added name="firstname" -->
+                        <input type="text" name="firstname" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <!-- UPDATE 2: Added name="lastname" -->
+                        <input type="text" name="lastname" placeholder="Your surname" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <!-- UPDATE 2: Added name="email" -->
+                    <input type="email" name="email" placeholder="email@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Message / Inquiry</label>
+                    <!-- UPDATE 2: Added name="message" -->
+                    <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-orange" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+   <!-- Updated Footer with Developer Credit -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <!-- Column 1: Brand & Socials -->
+        <div class="footer-col">
+            <h3>Thrive360<span>Connect</span></h3>
+            <p>Bridging the gap between education and the global workforce. We empower African youth through competence-based training.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/irene.elijah.75" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/coach-irene-nyaga/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="resources.html">Resources & Library</a></li>
+                <li><a href="events.html">Events & Gallery</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Programs & Support -->
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="women-coaching.html">Women Coaching</a></li>
+                <li><a href="youth-mentorship.html">Youth Mentorship</a></li>
+                <li><a href="resources.html">Books & Manuals</a></li>
+                <li><a href="index.html#contact">Get Involved</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            <p><i class="fas fa-envelope"></i> info@thrive360connect.com</p>
+            <p><i class="fas fa-phone"></i> +254 723312435</p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+        <p>Copyright © 2025 Thrive360Connect.com. All rights reserved.</p>
+        <p style="font-size: 13px; margin-top: 5px; opacity: 0.8;">
+            Developed by <a href="https://www.smartbizsystems.co.ke/" target="_blank" style="color: var(--brand-orange); text-decoration: none; font-weight: 600;">SmartBiz Systems</a>
+        </p>
+    </div>
+</footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
