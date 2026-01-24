@@ -90,6 +90,19 @@
 </head>
 <body>
 
+    <!-- STICKY PROMO BAR -->
+<div id="top-bar" class="promo-bar">
+    <div class="container promo-content">
+        <span class="promo-text">
+            🔥 <strong>Next Week:</strong> Holistic Wellness & Vision Boarding Masterclass (Jan 30-31)
+        </span>
+        <div class="promo-actions">
+            <a href="https://wa.me/254780312435?text=I%20want%20to%20register%20for%20the%20Holistic Wellness & Vision Boarding" class="btn-xs btn-white">Register Now</a>
+            <button id="close-bar" class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</div>
+
  <!-- Updated Navigation: Resources & Gallery moved to Footer -->
 <nav class="navbar">
     <div class="container nav-container" style="max-width: 1300px;">
@@ -110,6 +123,8 @@
                 <a href="#" style="color: var(--brand-orange);">Home <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-content">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events & Gallery</a></li>
+                    <li><a href="resources.html">Resources & Library</a></li>
                     <li><a href="about.html">About Us</a></li>
                 </ul>
             </li>
@@ -181,8 +196,8 @@
             <div class="text-content">
                 <span class="tag">Who We Are</span>
                 <h2 style="color: var(--brand-blue);">Bridging the Gap</h2>
-                <p>Thrive360Connect is more than a platform; it is a movement. Led by the philosophy of <strong>Coach Irene Nyaga</strong>, we recognize a critical disconnect: brilliant young minds graduating with degrees but lacking the soft skills and networks to succeed.</p>
-                <p>We provide African youth with access to invaluable resources, <strong>Competence-Based Education (CBE)</strong> principles, and international mentors.</p>
+                <p>True success is not just about money, grades, careers, or achievements—it’s about becoming whole, aligned, and fulfilled from the inside out. </p>
+                <p>That is why our coaching and mentorship is built on a Holistic Wellness Model that places the Spiritual core at the center, anchoring every other area of life.</p>
                 <a href="about.html" class="btn btn-outline" style="margin-top: 15px;">Read Our Story</a>
             </div>
             <div class="image-content">
@@ -535,6 +550,24 @@
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
+    </script>
+    <!-- JavaScript for Mobile Menu & Promo Bar -->
+    <script>
+        // ... (Your existing mobile menu code is here) ...
+
+        // PROMO BAR LOGIC
+        const promoBar = document.getElementById('top-bar');
+        const closeBtn = document.getElementById('close-bar');
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                // 1. Hide the bar
+                promoBar.style.display = 'none';
+                
+                // 2. Remove the padding from body so site moves back up
+                document.body.style.paddingTop = '0';
+            });
+        }
     </script>
 
 </body>

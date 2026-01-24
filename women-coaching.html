@@ -97,6 +97,20 @@
 </head>
 <body>
 
+    
+    <!-- STICKY PROMO BAR -->
+<div id="top-bar" class="promo-bar">
+    <div class="container promo-content">
+        <span class="promo-text">
+            🔥 <strong>Next Week:</strong> Holistic Wellness & Vision Boarding Masterclass (Jan 30-31)
+        </span>
+        <div class="promo-actions">
+            <a href="https://wa.me/254780312435?text=I%20want%20to%20register%20for%20the%20Holistic Wellness & Vision Boarding Masterclass" class="btn-xs btn-white">Register Now</a>
+            <button id="close-bar" class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</div>
+
     <!-- Updated Navigation: Resources & Gallery moved to Footer -->
 <nav class="navbar">
     <div class="container nav-container" style="max-width: 1300px;">
@@ -117,6 +131,8 @@
                 <a href="#" style="color: var(--brand-orange);">Home <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-content">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events & Gallery</a></li>
+                    <li><a href="resources.html">Resources & Library</a></li>
                     <li><a href="about.html">About Us</a></li>
                 </ul>
             </li>
@@ -188,44 +204,82 @@
         </div>
     </section>
 
-    <!-- The 4 Pillars (With Curved Background) -->
-    <section class="section section-curve" id="framework">
-        <!-- SVG Wave Top -->
-        <div style="position: absolute; top: -50px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg);">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <!-- The 4 Pillars (Philosophy & Framework) -->
+    <!-- UPDATED: Added padding-top: 120px to fix the overlapping text issue -->
+    <section class="section section-curve" id="framework" style="padding-top: 120px; padding-bottom: 80px;">
+        
+        <!-- SVG Wave Top (The Curve) -->
+        <div style="position: absolute; top: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg); z-index: 1;">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 80px;">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
             </svg>
         </div>
 
-        <div class="container text-center">
-            <h2 style="margin-bottom: 10px;">The Wholesome Wellness Framework</h2>
-            <p class="subtitle">A 360-degree approach to building a sustainable life.</p>
+        <div class="container text-center" style="position: relative; z-index: 2;">
+            <h2 style="margin-bottom: 10px;">Our Coaching Philosophy: Whole Life. Whole You.</h2>
+            <p class="subtitle">We believe you were never meant to grow in pieces.</p>
             
             <div class="cards-grid">
-                <!-- Pillar 1 -->
+                
+                <!-- Pillar 1: Belief -->
                 <div class="holistic-card">
                     <i class="fas fa-brain" style="font-size: 40px; color: var(--brand-blue); margin-bottom: 20px;"></i>
-                    <h4>Mental Clarity</h4>
-                    <p>Silence the inner critic. We use cognitive reframing tools to shift you from "overthinking" to "strategic execution."</p>
+                    <h4 style="color: var(--brand-blue);">Our Belief</h4>
+                    <div style="text-align: left; font-size: 14px; line-height: 1.6;">
+                        <p style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="color:var(--brand-orange)"></i> When your <strong>spirit</strong> is aligned, your mind becomes clear.</p>
+                        <p style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="color:var(--brand-orange)"></i> When your <strong>mind</strong> is clear, your emotions stabilize.</p>
+                        <p style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="color:var(--brand-orange)"></i> When your <strong>emotions</strong> are stable, your actions become intentional.</p>
+                        <p style="font-weight: 700; color: var(--brand-blue); margin-top: 15px; text-align: center;">When your inner world is balanced, your outer world thrives.</p>
+                    </div>
                 </div>
-                <!-- Pillar 2 -->
+
+                <!-- Pillar 2: Approach -->
                 <div class="holistic-card">
                     <i class="fas fa-heart" style="font-size: 40px; color: var(--brand-orange); margin-bottom: 20px;"></i>
-                    <h4>Emotional Intelligence</h4>
-                    <p>Learn to manage stress, navigate complex relationships, and lead with empathy without carrying the world's weight.</p>
+                    <h4 style="color: var(--brand-orange);">Our Approach</h4>
+                    <ul style="text-align: left; list-style: none; font-size: 14px;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--brand-cyan);"></i> We don’t fix people—<strong>we activate potential.</strong></li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--brand-cyan);"></i> We don’t pressure—<strong>we guide with purpose.</strong></li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--brand-cyan);"></i> We don’t rush growth—<strong>we nurture transformation.</strong></li>
+                    </ul>
+                    <p style="font-size: 13px; text-align: justify; margin-top: 15px; color: #666;">
+                        Through coaching & mentorship, we help women rise confidently, youth discover direction, and teens build strong foundations.
+                    </p>
                 </div>
-                <!-- Pillar 3 -->
+
+                <!-- Pillar 3: Model -->
                 <div class="holistic-card">
-                    <i class="fas fa-briefcase" style="font-size: 40px; color: var(--brand-cyan); margin-bottom: 20px;"></i>
-                    <h4>Career Strategy</h4>
-                    <p>Build your personal brand, negotiate your worth, and step into rooms you previously thought were closed to you.</p>
+                    <i class="fas fa-layer-group" style="font-size: 40px; color: var(--brand-cyan); margin-bottom: 20px;"></i>
+                    <h4 style="color: var(--brand-cyan);">Our Model</h4>
+                    <p style="font-size: 13px; margin-bottom: 10px;">We coach across 9 dimensions:</p>
+                    
+                    <ul style="text-align: left; font-size: 12px; color: #555; line-height: 1.4; list-style: none;">
+                        <li style="margin-bottom: 5px;">🔹 <strong>Spiritual:</strong> Identity & inner alignment</li>
+                        <li style="margin-bottom: 5px;">🔹 <strong>Mental:</strong> Mindset & clarity</li>
+                        <li style="margin-bottom: 5px;">🔹 <strong>Emotional:</strong> Healing & resilience</li>
+                        <li style="margin-bottom: 5px;">🔹 <strong>Physical:</strong> Energy & self-care</li>
+                        <li style="margin-bottom: 5px;">🔹 <strong>Environmental:</strong> Spaces & boundaries</li>
+                        <li style="margin-bottom: 5px;">🔹 <strong>Professional:</strong> Skills & excellence</li>
+                        <li style="margin-bottom: 5px;">🔹 <strong>Vocation:</strong> Calling & fulfillment</li>
+                        <li style="margin-bottom: 5px;">🔹 <strong>Social:</strong> Relationships & belonging</li>
+                        <li style="margin-bottom: 5px;">🔹 <strong>Financial:</strong> Stewardship & growth</li>
+                    </ul>
+                    <p style="font-size: 12px; font-style: italic; margin-top: 10px; color: var(--brand-blue);">"When one grows, all grow."</p>
                 </div>
-                <!-- Pillar 4 -->
+
+                <!-- Pillar 4: Promise -->
                 <div class="holistic-card">
                     <i class="fas fa-spa" style="font-size: 40px; color: #10ac84; margin-bottom: 20px;"></i>
-                    <h4>Physical Vitality</h4>
-                    <p>You cannot pour from an empty cup. We integrate rest protocols and health habits into your busy schedule.</p>
+                    <h4 style="color: #10ac84;">Our Promise</h4>
+                    <div style="text-align: left; font-size: 14px;">
+                        <p style="margin-bottom: 12px;"><i class="fas fa-star" style="color: gold;"></i> You will not just set goals—<strong>you will become aligned.</strong></p>
+                        <p style="margin-bottom: 12px;"><i class="fas fa-star" style="color: gold;"></i> You will not just survive—<strong>you will thrive.</strong></p>
+                        <p style="margin-bottom: 12px;"><i class="fas fa-star" style="color: gold;"></i> You will not just dream—<strong>you will live whole.</strong></p>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+                        <p style="text-align: center; color: #10ac84; font-weight: 600;">Empowered individuals change the world.</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -417,6 +471,24 @@
         document.getElementById('mobile-menu').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('active');
         });
+    </script>
+    <!-- JavaScript for Mobile Menu & Promo Bar -->
+    <script>
+        // ... (Your existing mobile menu code is here) ...
+
+        // PROMO BAR LOGIC
+        const promoBar = document.getElementById('top-bar');
+        const closeBtn = document.getElementById('close-bar');
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                // 1. Hide the bar
+                promoBar.style.display = 'none';
+                
+                // 2. Remove the padding from body so site moves back up
+                document.body.style.paddingTop = '0';
+            });
+        }
     </script>
 </body>
 </html>

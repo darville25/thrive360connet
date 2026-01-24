@@ -151,6 +151,19 @@
 </head>
 <body>
 
+    <!-- STICKY PROMO BAR -->
+<div id="top-bar" class="promo-bar">
+    <div class="container promo-content">
+        <span class="promo-text">
+            🔥 <strong>Next Week:</strong> Holistic Wellness & Vision Boarding Masterclass (Jan 30-31)
+        </span>
+        <div class="promo-actions">
+            <a href="https://wa.me/254780312435?text=I%20want%20to%20register%20for%20the%20Holistic Wellness & Vision Boarding" class="btn-xs btn-white">Register Now</a>
+            <button id="close-bar" class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</div>
+
     <!-- Updated Navigation: Resources & Gallery moved to Footer -->
 <nav class="navbar">
     <div class="container nav-container" style="max-width: 1300px;">
@@ -171,6 +184,8 @@
                 <a href="#" style="color: var(--brand-orange);">Home <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-content">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events & Gallery</a></li>
+                    <li><a href="resources.html">Resources & Library</a></li>
                     <li><a href="about.html">About Us</a></li>
                 </ul>
             </li>
@@ -195,77 +210,94 @@
         </div>
     </header>
 
-    <!-- UPCOMING EVENTS GRID -->
-    <div class="container">
-        <!-- Section Header -->
-        <div class="text-center" style="margin-bottom: 30px; position: relative; z-index: 1;">
-            <h2 style="color: var(--brand-blue); background: white; display: inline-block; padding: 0 15px;">Upcoming Events</h2>
-        </div>
+    <!-- UPCOMING WEBINARS & VIRTUAL MEETS -->
+    <section class="section bg-light" id="webinars">
+        <div class="container">
+            <div class="text-center">
+                <h2>Webinars & Virtual Summits</h2>
+                <p class="subtitle">Join our live sessions on Zoom & Google Meet. Learn, interact, and grow.</p>
+            </div>
 
-        <div class="events-grid">
-            
-            <!-- EVENT 1 (December) -->
-            <div class="event-card">
-                <!-- Badge inside card to prevent overlap -->
-                <div class="event-badge">Next Big Event</div>
+            <div class="webinar-grid">
                 
-                <div class="event-date-strip">
-                    <span class="date-big">15</span>
-                    <div class="date-meta">
-                        <strong>DEC</strong><br>2025
+                <!-- Event 1: Zoom Webinar -->
+                <div class="webinar-card">
+                    <!-- The Flyer Frame -->
+                    <div class="flyer-frame">
+                        <!-- Replace with your actual Flyer Image (Vertical is best) -->
+                        <img src="images/flyer-parenting.jpg.jpeg" alt="Parenting Webinar Flyer">
+                        <span class="status-badge" style="background: var(--brand-orange);">Upcoming</span>
                     </div>
-                </div>
-
-                <div class="event-body">
-                    <h3>Thriving Stars: End of Year Bootcamp</h3>
                     
-                    <div class="event-info">
-                        <span><i class="fas fa-map-marker-alt"></i> Nairobi (TBA)</span>
-                        <span><i class="fas fa-clock"></i> 9:00 AM - 4:00 PM</span>
-                    </div>
+                    <div class="webinar-details">
+                        <div class="platform-tag">
+                            <i class="fas fa-video"></i> Zoom Live
+                        </div>
+                        <h4>holistic wellness coaching and vision Boarding</h4>
+                        
+                        <div class="event-meta">
+                            <span><i class="far fa-calendar-alt"></i> 30th $ 31ST jan </span>
+                            <span><i class="far fa-clock"></i> 7:00PM to 9:00 PM EAT</span>
+                        </div>
 
-                    <p class="event-desc">
-                        A one-day intensive workshop for teens (Ages 13-19). We cover goal setting for the new year, academic resilience, and career mapping. Lunch provided.
-                    </p>
-
-                    <div class="event-actions">
-                        <a href="https://wa.me/254700000000?text=Register%20Dec%20Bootcamp" class="btn btn-orange" style="flex: 1; text-align: center; font-size: 14px;">Register (KES 2,500)</a>
-                        <a href="#contact" class="btn btn-outline" style="flex: 1; text-align: center; font-size: 14px;">Sponsor</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- EVENT 2 (January/Future) -->
-            <div class="event-card" style="border-top-color: var(--brand-blue);">
-                <div class="event-badge" style="background: #666;">Coming Soon</div>
-
-                <div class="event-date-strip">
-                    <span class="date-big" style="color: var(--brand-blue);">20</span>
-                    <div class="date-meta">
-                        <strong>JAN</strong><br>2026
+                        <p class="event-snippet">Kickstart 2026 with clarity and intention. Join Coach Irene Nyaga and Personal Branding Expert Hannah Githuki for a transformative 2-day virtual bootcamp. We go beyond basic goal-setting to align your holistic wellness with a powerful personal brand for the year ahead.</p>
+                        
+                        <!-- Link to Registration (Zoom Registration / Selar Ticket) -->
+                        <a href="#" class="btn btn-primary" style="width: 100%;">Get Ticket (KES 2,800)</a>
                     </div>
                 </div>
 
-                <div class="event-body">
-                    <h3>Parents & Teens Strategy Summit</h3>
+                <!-- Event 2: Google Meet Masterclass -->
+                <div class="webinar-card">
+                    <div class="flyer-frame">
+                        <img src="images/flyer-career.jpg" alt="Career Masterclass Flyer">
+                        <span class="status-badge" style="background: #10ac84;">Selling Fast</span>
+                    </div>
                     
-                    <div class="event-info">
-                        <span><i class="fas fa-map-marker-alt"></i> Westlands, Nairobi</span>
-                        <span><i class="fas fa-clock"></i> 10:00 AM - 1:00 PM</span>
-                    </div>
+                    <div class="webinar-details">
+                        <div class="platform-tag" style="color: #ea4335; border-color: #ea4335;">
+                            <i class="fas fa-video"></i> Google Meet
+                        </div>
+                        <h4>Career Mapping Masterclass</h4>
+                        
+                        <div class="event-meta">
+                            <span><i class="far fa-calendar-alt"></i> Fri, 28th Feb</span>
+                            <span><i class="far fa-clock"></i> 8:00 PM EAT</span>
+                        </div>
 
-                    <p class="event-desc">
-                        A joint session for parents and their high-schoolers to align on career choices and university applications. Expert speakers from top universities included.
-                    </p>
-
-                    <div class="event-actions">
-                        <a href="https://wa.me/254700000000?text=Waitlist%20Jan%20Summit" class="btn btn-primary" style="width: 100%; text-align: center;">Join Waitlist</a>
+                        <p class="event-snippet">Interactive workshop for young professionals to design their 5-year career trajectory.</p>
+                        
+                        <a href="https://selar.co/YOUR-LINK" class="btn btn-outline" style="width: 100%;">Get Ticket (KES 500)</a>
                     </div>
                 </div>
-            </div>
 
+                <!-- Event 3: Clarity Call (Recurring) -->
+                <div class="webinar-card">
+                    <div class="flyer-frame">
+                        <img src="images/flyer-clarity.jpg" alt="Clarity Session Flyer">
+                        <span class="status-badge" style="background: var(--brand-blue);">Weekly</span>
+                    </div>
+                    
+                    <div class="webinar-details">
+                        <div class="platform-tag">
+                            <i class="fas fa-users"></i> Zoom Group
+                        </div>
+                        <h4>Friday Faith & Focus</h4>
+                        
+                        <div class="event-meta">
+                            <span><i class="far fa-calendar-alt"></i> Every Friday</span>
+                            <span><i class="far fa-clock"></i> 6:00 AM EAT</span>
+                        </div>
+
+                        <p class="event-snippet">Start your weekend aligned. A spiritual wellness session for women leaders.</p>
+                        
+                        <a href="https://wa.me/254780312435?text=Link_for_Friday_Faith" class="btn btn-orange" style="width: 100%;">Request Link</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </section>
     <!-- 2. PHOTO GALLERY (Grid) -->
     <section class="section bg-light">
         <div class="container">
@@ -418,6 +450,24 @@
         document.getElementById('mobile-menu').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('active');
         });
+    </script>
+    <!-- JavaScript for Mobile Menu & Promo Bar -->
+    <script>
+        // ... (Your existing mobile menu code is here) ...
+
+        // PROMO BAR LOGIC
+        const promoBar = document.getElementById('top-bar');
+        const closeBtn = document.getElementById('close-bar');
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                // 1. Hide the bar
+                promoBar.style.display = 'none';
+                
+                // 2. Remove the padding from body so site moves back up
+                document.body.style.paddingTop = '0';
+            });
+        }
     </script>
 </body>
 </html>
