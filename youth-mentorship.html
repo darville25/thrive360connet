@@ -487,5 +487,35 @@
             document.querySelector('.nav-links').classList.toggle('active');
         });
     </script>
+    <!-- JavaScript for Mobile Menu & Promo Bar -->
+    <script>
+        // 1. Mobile Menu Logic
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // 2. Promo Bar Logic (THE FIX)
+        const promoBar = document.getElementById('top-bar');
+        const closeBtn = document.getElementById('close-bar');
+        const navbar = document.querySelector('.navbar'); // Select the navbar
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                // A. Hide the promo bar
+                promoBar.style.display = 'none';
+                
+                // B. Remove the spacing from the body
+                document.body.style.paddingTop = '0';
+
+                // C. FIX: Move the Navbar up to the very top
+                navbar.style.top = '0';
+            });
+        }
+    </script>
 </body>
 </html>

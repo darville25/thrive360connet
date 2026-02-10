@@ -302,21 +302,33 @@
             document.querySelector('.nav-links').classList.toggle('active');
         });
     </script>
-    <!-- JavaScript for Mobile Menu & Promo Bar -->
+   <!-- JavaScript for Mobile Menu & Promo Bar -->
     <script>
-        // ... (Your existing mobile menu code is here) ...
+        // 1. Mobile Menu Logic
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
 
-        // PROMO BAR LOGIC
+        // 2. Promo Bar Logic (THE FIX)
         const promoBar = document.getElementById('top-bar');
         const closeBtn = document.getElementById('close-bar');
+        const navbar = document.querySelector('.navbar'); // Select the navbar
 
         if (closeBtn) {
             closeBtn.addEventListener('click', () => {
-                // 1. Hide the bar
+                // A. Hide the promo bar
                 promoBar.style.display = 'none';
                 
-                // 2. Remove the padding from body so site moves back up
+                // B. Remove the spacing from the body
                 document.body.style.paddingTop = '0';
+
+                // C. FIX: Move the Navbar up to the very top
+                navbar.style.top = '0';
             });
         }
     </script>
