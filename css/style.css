@@ -79,6 +79,13 @@ ul { list-style: none; }
 .dropdown-content li a { padding: 10px 20px; display: block; color: var(--text-dark); font-size: 13px; }
 .dropdown-content li a:hover { background-color: var(--bg-light); color: var(--brand-orange); }
 .dropdown:hover .dropdown-content { display: block; }
+html {
+    scroll-behavior: smooth; /* Makes it slide down nicely instead of jumping */
+}
+
+#contact {
+    scroll-margin-top: 100px; /* Crucial: Stops the section 100px below the top so the Navbar doesn't cover it */
+}
 
 /* =========================================
    4. HERO & SECTIONS
@@ -265,4 +272,58 @@ ul { list-style: none; }
     .promo-content { flex-direction: column; gap: 5px; text-align: center; }
     .promo-text { font-size: 12px; padding-right: 20px; }
     .close-btn { position: absolute; top: 10px; right: 15px; }
+
+    /* Specific Styles for the Registration Page */
+        body { background-color: #f4f8fb; }
+        
+        .register-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden; /* Keeps image corners rounded */
+        }
+
+        .form-banner {
+            width: 100%;
+            border-bottom: 5px solid var(--brand-orange);
+        }
+        
+        .form-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .form-content {
+            padding: 30px 40px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .radio-group label {
+            font-weight: 400;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .radio-group input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--brand-orange);
+        }
+
+        @media (max-width: 768px) {
+            .form-content { padding: 20px; }
+            .register-container { margin: 20px; }
+        }
 }
